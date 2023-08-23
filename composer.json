@@ -1,0 +1,43 @@
+{
+    "name": "cmb2/woocommerce-hpos-orders",
+    "description": "Adds the ability to add custom fields to the new WooCommerce HPOS orders page.",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "CMB2",
+            "email": "info@cmb2.io",
+            "homepage": "https://github.com/CMB2",
+            "role": "Developer"
+        }
+    ],
+    "keywords": ["wordpress", "plugin", "metabox", "woocommerce", "hpos", "orders"],
+    "homepage": "https://github.com/CMB2/CMB2",
+    "type": "wordpress-plugin",
+    "support": {
+        "issues": "https://github.com/CMB2/cmb2-woocommerce-hpos-orders/issues",
+        "source": "https://github.com/CMB2/cmb2-woocommerce-hpos-orders/"
+    },
+    "require": {
+        "php": ">7.0.0"
+    },
+    "suggest": {
+        "composer/installers": "~1.0"
+    },
+    "repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/awesomemotive/am-cli-tools"
+		}
+	],
+    "config": {
+		"bin-dir": "bin",
+		"discard-changes": true,
+		"sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+	},
+    "require-dev": {
+        "awesomemotive/am-cli-tools": ">=1.3.7"
+    }
+}
