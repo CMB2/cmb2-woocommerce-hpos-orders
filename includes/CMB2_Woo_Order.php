@@ -71,12 +71,13 @@ class CMB2_Woo_Order {
 			$id = (int) $id;
 		}
 
-		if ( ! $cached || ! isset( self::$instances[ $id ] ) ) {
+		$me = isset( self::$instances[ $id ] ) ? self::$instances[ $id ] : null;
+		if ( ! $cached || ! $me ) {
 			$me = new self( $id );
 			$me->fetch_and_set_order();
 		}
 
-		return self::$instances[ $id ];
+		return $me;
 	}
 
 	/**
