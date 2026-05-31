@@ -108,7 +108,11 @@ class CMB2_Woo_Order {
 	 * @return self
 	 */
 	protected function fetch_and_set_order() {
-		$this->set_order( wc_get_order( $this->id ) );
+		// Guard against WooCommerce being inactive: this is an mu-plugin and
+		// loads regardless of whether WooCommerce provides wc_get_order().
+		if ( function_exists( 'wc_get_order' ) ) {
+			$this->set_order( wc_get_order( $this->id ) );
+		}
 
 		return $this;
 	}

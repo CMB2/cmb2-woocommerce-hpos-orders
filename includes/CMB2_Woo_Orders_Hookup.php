@@ -93,6 +93,10 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	 * @return mixed
 	 */
 	public function get_order_meta( $data, $object_id, $args ) {
+		if ( ! $this->is_order_object_type( $args ) ) {
+			return $data;
+		}
+
 		$order = $this->get_order( $object_id );
 		if ( ! $order->is() ) {
 			return $data;
@@ -112,6 +116,10 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	 * @return bool
 	 */
 	public function update_order_meta( $override, $args ) {
+		if ( ! $this->is_order_object_type( $args ) ) {
+			return $override;
+		}
+
 		$order = $this->get_order( $args['id'] );
 		if ( ! $order->is() ) {
 			return $override;
@@ -135,6 +143,10 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	 * @return bool
 	 */
 	public function remove_order_meta( $override, $args ) {
+		if ( ! $this->is_order_object_type( $args ) ) {
+			return $override;
+		}
+
 		$order = $this->get_order( $args['id'] );
 		if ( ! $order->is() ) {
 			return $override;
@@ -168,6 +180,25 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 		}
 
 		$order->save();
+	}
+
+	/**
+	 * Whether the field args being filtered belong to our order object type.
+	 *
+	 * The cmb2_override_meta_* filters are global and fire for every CMB2
+	 * field on every object type (posts, pages, users, etc.). We only want to
+	 * intervene for the HPOS orders object type, otherwise we'd needlessly
+	 * (and, when WooCommerce is inactive, fatally) try to load an order for
+	 * unrelated objects.
+	 *
+	 * @since {{next}}
+	 *
+	 * @param array $args The field args passed to the override filter.
+	 *
+	 * @return bool
+	 */
+	protected function is_order_object_type( $args ) {
+		return isset( $args['type'] ) && $this->object_type === $args['type'];
 	}
 
 	/**
