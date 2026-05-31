@@ -2,7 +2,7 @@
 /**
  * Handles hooking CMB2 HPOS order fields into WooCommerce orders.
  *
- * @since  {{next}}
+ * @since 1.0.1
  *
  * @category  WordPress_Plugin
  * @package   CMB2
@@ -16,14 +16,14 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	 * The object type we are performing the hookup for
 	 *
 	 * @var   string
-	 * @since {{next}}
+	 * @since 1.0.1
 	 */
 	protected $object_type = CMB2_Woo_HPOS_Orders::OBJECT_TYPE;
 
 	/**
 	 * Constructor
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 * @param CMB2   $cmb        The CMB2 object to hookup.
 	 */
 	public function __construct( CMB2 $cmb ) {
@@ -33,7 +33,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Hook in and add metaboxes, override meta values, and save meta values, etc.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 * @return void
 	 */
 	public function hooks() {
@@ -48,7 +48,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * If the current page is the object type, pre-enqueue the CMB2 scripts/styles.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 * @param bool   $should_pre_enqueue Whether to pre-enqueue.
 	 * @param string $hook               The current page hook.
 	 * @return bool
@@ -64,7 +64,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Save the order meta.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param int      $order_id The order ID.
 	 * @param WC_Order $order    The order object.
@@ -84,7 +84,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Get the order meta.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param mixed  $data      The meta value.
 	 * @param int    $object_id The object ID.
@@ -108,7 +108,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Update the order meta.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param bool|array $override Whether to override the meta value.
 	 * @param array      $args     The field args.
@@ -135,7 +135,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Remove the order meta.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param bool|array $override Whether to override the meta value.
 	 * @param array      $args     The field args.
@@ -162,7 +162,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Trigger the save of the order meta.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param int   $object_id The object ID.
 	 * @param array $updated   The updated fields.
@@ -191,7 +191,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	 * (and, when WooCommerce is inactive, fatally) try to load an order for
 	 * unrelated objects.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param array $args The field args passed to the override filter.
 	 *
@@ -204,7 +204,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Get the order object and load the CMB2_Woo_Order class if needed.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param int|WC_Order $id The order ID or object.
 	 *
@@ -221,7 +221,7 @@ class CMB2_Woo_Orders_Hookup extends CMB2_Hookup {
 	/**
 	 * Magic getter for our object.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param string $field Property to retrieve.
 	 *

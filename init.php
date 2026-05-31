@@ -13,7 +13,7 @@ class CMB2_Woo_HPOS_Orders {
 	 * The object type we are performing the hookup for
 	 *
 	 * @var   string
-	 * @since {{next}}
+	 * @since 1.0.1
 	 */
 	const OBJECT_TYPE = 'woocommerce_page_wc-orders';
 
@@ -26,7 +26,7 @@ class CMB2_Woo_HPOS_Orders {
 	 * CMB2_Woo_Orders_Hookup instance if woocommerce_page_wc-orders page metabox.
 	 *
 	 * @var   CMB2_Woo_Orders_Hookup|null
-	 * @since {{next}}
+	 * @since 1.0.1
 	 */
 	protected $wooorders_hookup = null;
 
@@ -55,7 +55,7 @@ class CMB2_Woo_HPOS_Orders {
 	/**
 	 * Hook in and setup our hookup object.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param CMB2 $hookup The CMB2_Hookup object.
 	 *
@@ -73,7 +73,7 @@ class CMB2_Woo_HPOS_Orders {
 	/**
 	 * Hook in and update the object id if on the orders page.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param int  $object_id The object ID.
 	 * @param CMB2 $cmb       The CMB2 object.
@@ -92,7 +92,7 @@ class CMB2_Woo_HPOS_Orders {
 	/**
 	 * Hook in and update the box object type if on the orders page.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param string $mb_object_type The metabox object type.
 	 * @param string $found_type     The found object type.

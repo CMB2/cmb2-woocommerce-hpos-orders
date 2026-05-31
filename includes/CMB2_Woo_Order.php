@@ -2,7 +2,7 @@
 /**
  * CMB2 WooCommerce Order class.
  *
- * @since  {{next}}
+ * @since 1.0.1
  *
  * @category  WordPress_Plugin
  * @package   CMB2
@@ -16,7 +16,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Holds instances of this order object.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @var CMB2_Woo_Order[]
 	 */
@@ -25,7 +25,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Holds the ID of the order.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @var string
 	 */
@@ -34,7 +34,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Holds the order object.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @var WC_Order
 	 */
@@ -43,7 +43,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Get instance of the CMB2_Woo_Order and cache it.
 	 *
-	 * @since  {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param  string  $id    The order ID.
 	 * @param  boolean $cached Whether to use the cached instance or not.
@@ -83,7 +83,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Class constructor.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param string $id The order ID.
 	 */
@@ -103,7 +103,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Fetches the order object and sets it.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @return self
 	 */
@@ -120,7 +120,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Sets the order object.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param WC_Order $order The order object.
 	 *
@@ -135,7 +135,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Checks if the order exists/is valid.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @return boolean
 	 */
@@ -151,7 +151,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Gets order meta, use HPOS API when possible.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param  string $key Meta Key.
 	 * @param  bool   $single return first found meta with key, or all with $key.
@@ -169,7 +169,7 @@ class CMB2_Woo_Order {
 	 *
 	 * If using HPOS, can pass $save = false to not save the order (for bulk updates).
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param string $key   The meta key.
 	 * @param mixed  $value The meta value.
@@ -198,7 +198,7 @@ class CMB2_Woo_Order {
 	/**
 	 * Proxy calls to the order object.
 	 *
-	 * @since {{next}}
+	 * @since 1.0.1
 	 *
 	 * @param string $method The method name.
 	 * @param array  $args   The method arguments.
