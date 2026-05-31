@@ -18,5 +18,9 @@ $test_text_value = wc_get_order( $order_id )->get_meta( 'yourprefix_woo_orders_t
 
 ## Changelog
 
+### 1.0.1
+* Bugfix: Gate the `cmb2_override_meta_*` filters to the orders object type so they no longer run for unrelated CMB2 fields (posts, pages, users, etc.), which caused a fatal `Call to undefined function wc_get_order()` when WooCommerce was inactive.
+* Guard `wc_get_order()` with `function_exists()` since this loads as an mu-plugin regardless of whether WooCommerce is active.
+
 ### 1.0.0
 * Release

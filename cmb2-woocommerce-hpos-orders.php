@@ -3,7 +3,7 @@
  * Plugin Name: CMB2 WooCommerce HPOS Orders
  * Plugin URI: https://github.com/CMB2/cmb2-woocommerce-hpos-orders
  * Description: Adds the ability to add custom fields to the new WooCommerce HPOS orders page.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: CMB2
  * Author URI: http://cmb2.io
  * License: GPLv2+
@@ -19,7 +19,7 @@
  * @author    CMB2 <info@cmb2.io>
  * @copyright 2016 CMB2 <info@cmb2.io>
  * @license   GPL-2.0+
- * @version   1.0.0
+ * @version   1.0.1
  * @link      https://github.com/CMB2/cmb2-woocommerce-hpos-orders
  * @since     1.2.3
  */
@@ -46,7 +46,7 @@
  * Loader versioning: http://jtsternberg.github.io/wp-lib-loader/
  */
 
-if ( ! class_exists( 'CMB2_Woo_HPOS_Orders_127', false ) ) {
+if ( ! class_exists( 'CMB2_Woo_HPOS_Orders_101', false ) ) {
 
 	/**
 	 * Versioned loader class-name
@@ -57,18 +57,18 @@ if ( ! class_exists( 'CMB2_Woo_HPOS_Orders_127', false ) ) {
 	 * @package  CMB2_Woo_HPOS_Orders
 	 * @author   CMB2 <info@cmb2.io>
 	 * @license  GPL-2.0+
-	 * @version  1.0.0
+	 * @version  1.0.1
 	 * @link     https://github.com/CMB2/cmb2-woocommerce-hpos-orders
 	 * @since    1.0.0
 	 */
-	class CMB2_Woo_HPOS_Orders_127 {
+	class CMB2_Woo_HPOS_Orders_101 {
 
 		/**
 		 * CMB2_Woo_HPOS_Orders version number
 		 * @var   string
 		 * @since 1.2.3
 		 */
-		const VERSION = '1.0.0';
+		const VERSION = '1.0.1';
 
 		/**
 		 * Current version hook priority.
@@ -77,7 +77,7 @@ if ( ! class_exists( 'CMB2_Woo_HPOS_Orders_127', false ) ) {
 		 * @var   int
 		 * @since 1.2.3
 		 */
-		const PRIORITY = 9999;
+		const PRIORITY = 9998;
 
 		/**
 		 * Starts the version checking process.
@@ -155,5 +155,5 @@ if ( ! class_exists( 'CMB2_Woo_HPOS_Orders_127', false ) ) {
 	}
 
 	// Kick it off.
-	new CMB2_Woo_HPOS_Orders_127;
+	new CMB2_Woo_HPOS_Orders_101;
 }
